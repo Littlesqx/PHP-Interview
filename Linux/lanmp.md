@@ -1,36 +1,36 @@
-## LAMP环境的配置
+## LAMP 环境的配置
 
-安装环境 centos6.x.root权限下操作。安装顺序为Apache、PHP、MySQL
+安装环境 centos6.x.root 权限下操作。安装顺序为 Apache、PHP、MySQL
 
-### 1. 安装gcc编译器以及相关工具
+### 1. 安装 gcc 编译器以及相关工具
 
 ```shell
 yum -y install gcc gcc-c++  autoconf  automake libtool pcre pcre-devel
 ```
 
-### 2. 安装apache2.4.12
+### 2. 安装 apache2.4.12
 
-apacehe 依赖apr和apr-util
+apacehe 依赖 apr 和 apr-util
 
-- apache2.4.12 的源码包[http://mirrors.cnnic.cn/apache//httpd/httpd-2.4.12.tar.gz](http://mirrors.cnnic.cn/apache//httpd/httpd-2.4.12.tar.gz)
+- apache2.4.12 的源码包 [http://mirrors.cnnic.cn/apache//httpd/httpd-2.4.12.tar.gz](http://mirrors.cnnic.cn/apache//httpd/httpd-2.4.12.tar.gz)
 - APR 1.5.2 源码包下载地址 [http://mirrors.cnnic.cn/apache//apr/apr-1.5.2.tar.gz](http://mirrors.cnnic.cn/apache//apr/apr-1.5.2.tar.gz "http://mirrors.cnnic.cn/apache//apr/apr-1.5.2.tar.gz")
 - APR-util 1.5.4 源码包下载地址 [http://mirrors.cnnic.cn/apache//apr/apr-util-1.5.4.tar.gz](http://mirrors.cnnic.cn/apache//apr/apr-util-1.5.4.tar.gz)
 
-#### 2.1 编译安装apr和ap-util
+#### 2.1 编译安装 apr 和 ap-util
 
 ```shell
 tar -zxf apr-1.4.5.tar.gz
 cd apr-1.4.5
 ./configure --prefix=/usr/local/apr
 make && make install
-#编译util
+#编译 util
 tar zxvf apr-util-1.5.4.tar.gz
 cd apr-util-1.5.4
 ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr/bin/apr-1-config
 make && make install
 ```
 
-#### 2.2 编译Apache
+#### 2.2 编译 Apache
 
 ```shell
 tar zxvf tar zxvf httpd-2.4.12.tar.gz
@@ -45,11 +45,11 @@ cd httpd-2.4.12
 >make && make install
 ```
 
-#### 2.3 添加服务脚本放行80端口
+#### 2.3 添加服务脚本放行 80 端口
 
 ```shell
  cp /usr/local/apache/bin/apachectl /etc/init.d/httpd
- #放开80端口
+ #放开 80 端口
  vi /etc/sysconfig/iptables
 #增加以下内容
 -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
@@ -57,11 +57,11 @@ cd httpd-2.4.12
 service iptables restart
 ```
 
-### 3. 安装PHP
+### 3. 安装 PHP
 
 #### 3.1 安装前准备
 
-安装php拓展所需要的依赖。如gd库、zlib、curl等
+安装 php 拓展所需要的依赖。如 gd 库、zlib、curl 等
 
 ```shell
 yum -y install libmcrypt-devel mhash-devel libxslt-devel \
@@ -71,9 +71,9 @@ yum -y install libmcrypt-devel mhash-devel libxslt-devel \
 	krb5 krb5-devel libidn libidn-devel openssl openssl-devel
 ```
 
-#### 3.2 编译PHP
+#### 3.2 编译 PHP
 
-下载php的源码包.从国内的搜狐镜像下载[http://mirrors.sohu.com/](http://mirrors.sohu.com/)
+下载 php 的源码包. 从国内的搜狐镜像下载 [http://mirrors.sohu.com/](http://mirrors.sohu.com/)
 
 http://mirrors.sohu.com/php/php-7.2.1.tar.gz
 
@@ -93,9 +93,9 @@ cd php-7.2.1
 	--with-apxs2=/usr/local/apache/bin/apxs \
 ```
 
-#### 3.3整合PHP和Apache
+#### 3.3 整合 PHP 和 Apache
 
-- 编辑apache配置文件
+- 编辑 apache 配置文件
 
 ```shell
 vim /usr/local/apache/conf/httpd.conf
@@ -115,7 +115,7 @@ AddType application/x-httpd-php .php
 </IfModule>
 ```
 
-- 重启apache
+- 重启 apache
 
 ```SHELL
 service httpd restart
@@ -123,7 +123,7 @@ service httpd restart
 
 
 
-### Lnmp安装
+### Lnmp 安装
 
 
 

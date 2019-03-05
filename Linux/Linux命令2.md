@@ -14,23 +14,23 @@ du -sh
 
 ## 打包和解压
 
-在linux中打包和压缩和分两步来实现的
+在 linux 中打包和压缩和分两步来实现的
 
-tar、zip命令
+tar、zip 命令
 
 打包是将多个文件归并到一个文件:
 
 ```shell
-tar -cvf etc.tar /etc <==仅打包，不压缩！
+tar -cvf etc.tar /etc <== 仅打包，不压缩！
 gzip demo.txt #压缩
-zip -q -r html.zip /home/Blinux/html #打包压缩成zip文件
+zip -q -r html.zip /home/Blinux/html #打包压缩成 zip 文件
 ```
 
 解压
 
 ```shell
 tar -zxvf xx.tar.gz
-unzip test.zip# 解压zip文件
+unzip test.zip# 解压 zip 文件
 ```
 
 ## 进程管理
@@ -39,15 +39,15 @@ unzip test.zip# 解压zip文件
 
 ```shell
  ps -ef	# 查询正在运行的进程信息
- ps -A | grep nginx #查看进程中的nginx
+ ps -A | grep nginx #查看进程中的 nginx
  top #显示进程信息，并实时更新
- lsof -p 23295 #查询指定的进程ID(23295)打开的文件：
+ lsof -p 23295 #查询指定的进程 ID(23295) 打开的文件：
 ```
 
 ### 杀死进程 kill
 
 ```shell
-# 杀死指定PID的进程 (PID为Process ID)
+# 杀死指定 PID 的进程 (PID 为 Process ID)
 kill 1111
 #杀死相关进程
 kill -9 3434
@@ -77,9 +77,9 @@ netstat -at
 netstat -l
 ```
 
-## 查看内存free
+## 查看内存 free
 
-缺省时free的单位为KB
+缺省时 free 的单位为 KB
 
 ```shell
 $free
@@ -89,4 +89,4 @@ Mem:       8175320    6159248    2016072          0     310208    5243680
 Swap:      6881272      16196    6865076
 ```
 
-free的输出一共有四行，第四行为交换区的信息，分别是交换的总量（total），使用量（used）和有多少空闲的交换区（free），这个比较清楚，不说太多
+free 的输出一共有四行，第四行为交换区的信息，分别是交换的总量（total），使用量（used）和有多少空闲的交换区（free），这个比较清楚，不说太多

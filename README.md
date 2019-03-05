@@ -1,21 +1,21 @@
-## PHP面试准备的资料
+## PHP 面试准备的资料
 
-这个项目是自己准备面试整理的资料。可能包括PHP、MySQL等资料。方便自己以后查阅，会不定期更新，如果错误，请指出，谢谢。欢迎大家提交PR，谢谢大家的star
+这个项目是自己准备面试整理的资料。可能包括 PHP、MySQL 等资料。方便自己以后查阅，会不定期更新，如果错误，请指出，谢谢。欢迎大家提交 PR，谢谢大家的 star
 
-可以通过[https://xianyunyh.gitbooks.io/php-interview/](https://xianyunyh.gitbooks.io/php-interview/)预览。欢迎有精力的朋友完善一下。谢谢。
+可以通过 [https://xianyunyh.gitbooks.io/php-interview/](https://xianyunyh.gitbooks.io/php-interview/) 预览。欢迎有精力的朋友完善一下。谢谢。
 
 
 ### 目录
 
 - [Linux](Linux/REAMDE.md)
 
-  - [Linux基本命令](https://github.com/xianyunyh/PHP-Interview/blob/master/Linux/Linux%E5%91%BD%E4%BB%A4.md)
+  - [Linux 基本命令](https://github.com/xianyunyh/PHP-Interview/blob/master/Linux/Linux%E5%91%BD%E4%BB%A4.md)
   - [Crontab](Linux/crontab.md)
   - [Shell](Linux/shell.md)
-  - [Linux-Inode介绍](Linux/inode.md)
-  - [VIM编辑器](Linux/Vim.md)
+  - [Linux-Inode 介绍](Linux/inode.md)
+  - [VIM 编辑器](Linux/Vim.md)
   - [Lnmp/Lamp](Linux/lanmp.md)
-  - [LinuxIO模型.md](Linux/LinuxIO模型.md)
+  - [LinuxIO 模型.md](Linux/LinuxIO模型.md)
 
 - [数据库](Mysql/README.md)
 
@@ -25,11 +25,11 @@
 
 - [计算机网络](计算机网络/README.md)
 
-  - [IP协议](计算机网络/IP协议.md)
+  - [IP 协议](计算机网络/IP协议.md)
 
-  - [TCP协议](计算机网络/TCP协议.md)
-  - [UDP协议](计算机网络/UDP协议.md)
-  - [HTTP协议](计算机网络/HTTP协议)
+  - [TCP 协议](计算机网络/TCP协议.md)
+  - [UDP 协议](计算机网络/UDP协议.md)
+  - [HTTP 协议](计算机网络/HTTP协议)
   - [HTTPS/HTTP2/HTTP](计算机网络/HTTP2.md)
 
 - [版本控制器](版本控制器/Git.md)
@@ -46,7 +46,7 @@
   - [堆](数据结构/堆.md)
   - [集合](数据结构/集合.md)
   - [树](数据结构/树.md)
-    - [二叉树 ]()
+    - [二叉树]()
     - [二叉查找树]()
     - [红黑树]()
     - [B-Tree、B+Tree]()
@@ -91,7 +91,7 @@
 - [PHP](PHP/README.md)
 
   - [PHP7](PHP/php7.md)
-  - [面向对象OOP]()
+  - [面向对象 OOP]()
   - [Zval](https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP-Zval%E7%BB%93%E6%9E%84.md)
   - [HashTable](https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP7-HashTable.md)
   - [Swoole]()
@@ -103,29 +103,29 @@
 
 
 
-## 生成自己的Gitbook
+## 生成自己的 Gitbook
 
 ```bash
 $ npm install gitbook-cli -g
 $ git clone https://github.com/xianyunyh/PHP-Interview
 $ cd PHP-Interview
 $ gitbook serve # 本地预览
-$ gitbook build # 生成静态的html
+$ gitbook build # 生成静态的 html
 ```
-##推荐阅读资料
+## 推荐阅读资料
 
-- [PHP函数库](http://overapi.com/php)
-- [PHP7内核剖析](https://github.com/pangudashu/php7-internal)
+- [PHP 函数库](http://overapi.com/php)
+- [PHP7 内核剖析](https://github.com/pangudashu/php7-internal)
 - [php7-internal](https://github.com/laruence/php7-internal)
 - [PHP7-HashTable](http://nikic.github.io/2014/12/22/PHPs-new-hashtable-implementation.html)
 - [PHP7-zval](http://nikic.github.io/2015/05/05/Internal-value-representation-in-PHP-7-part-1.html)
-- [PHP中的变化](https://github.com/tpunt/PHP7-Reference)
-- [PHP资源集合](https://github.com/ziadoz/awesome-php)
-- [设计模式PHP实现](https://github.com/domnikl/DesignPatternsPHP)
+- [PHP 中的变化](https://github.com/tpunt/PHP7-Reference)
+- [PHP 资源集合](https://github.com/ziadoz/awesome-php)
+- [设计模式 PHP 实现](https://github.com/domnikl/DesignPatternsPHP)
 - [Swoole](https://www.swoole.com/)
-- [程序员的内功-算法和数据结构](http://www.cnblogs.com/jingmoxukong/p/4329079.html)
+- [程序员的内功 - 算法和数据结构](http://www.cnblogs.com/jingmoxukong/p/4329079.html)
 - [数据结构和算法](http://www.cnblogs.com/skywang12345/p/3603935.html)
-- [剑指offer-PHP实现](https://blog.csdn.net/column/details/15795.html)
+- [剑指 offer-PHP 实现](https://blog.csdn.net/column/details/15795.html)
 
 
 

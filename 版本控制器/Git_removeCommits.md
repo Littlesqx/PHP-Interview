@@ -1,4 +1,4 @@
-在 Git 开发中通常会控制主干分支的质量，但有时还是会把错误的代码合入到远程主干。 虽然可以 直接回滚远程分支](https://harttle.land/2018/03/12/reset-origin-without-force-push.html)， 但有时新的代码也已经合入，直接回滚后最近的提交都要重新操作。 那么有没有只移除某些 Commit 的方式呢？可以一次 [revert](https://git-scm.com/docs/git-revert) 操作来完成。
+在 Git 开发中通常会控制主干分支的质量，但有时还是会把错误的代码合入到远程主干。 虽然可以 直接回滚远程分支 ](https://harttle.land/2018/03/12/reset-origin-without-force-push.html)， 但有时新的代码也已经合入，直接回滚后最近的提交都要重新操作。 那么有没有只移除某些 Commit 的方式呢？可以一次 [revert](https://git-scm.com/docs/git-revert) 操作来完成。
 
 # 一个例子
 

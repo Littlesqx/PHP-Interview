@@ -14,7 +14,7 @@
 
 - 输入
 
-一个算法有0个或多个输入 
+一个算法有 0 个或多个输入 
 
 - 输出
 
@@ -26,11 +26,11 @@
 
 ### 时间复杂度
 
-时间复杂度是执行算法所需要的工作量，一般来说，计算机算法是问题规模n 的函数f(n)，算法的时间复杂度也因此记做。
+时间复杂度是执行算法所需要的工作量，一般来说，计算机算法是问题规模 n 的函数 f(n)，算法的时间复杂度也因此记做。
 
 `T(n)=Ο(f(n))`
 
-因此，问题的规模n 越大，算法执行的时间的增长率与f(n) 的增长率正相关
+因此，问题的规模 n 越大，算法执行的时间的增长率与 f(n) 的增长率正相关
 
 ### 空间复杂度
 
@@ -46,12 +46,8 @@
 
 ```php
 function BubbleSort(array $container)
-{
-    $count = count($container);
-    for ($j = 1; $j < $count; $j++) {
-        for ($i = 0; $i < $count - $j; $i++) {
-            if ($container[$i] > $container[$i + 1]) {
-                $temp = $container[$i];
+{$count = count($container);
+    for ($j = 1; $j < $count; $j++) {for ($i = 0; $i < $count - $j; $i++) {if ($container[$i] > $container[$i + 1]) {$temp = $container[$i];
                 $container[$i] = $container[$i + 1];
                 $container[$i + 1] = $temp;
             }
@@ -64,14 +60,11 @@ function BubbleSort(array $container)
 
 ```php
 function InsertSort(array $container)
-{
-    $count = count($container);
-    for ($i = 1; $i < $count; $i++){
-        $temp = $container[$i];
+{$count = count($container);
+    for ($i = 1; $i < $count; $i++){$temp = $container[$i];
         $j    = $i - 1;
         // Init
-        while($j >= 0 && $container[$j] > $temp){
-            $container[$j+1] = $container[$j];
+        while($j>= 0 && $container[$j] > $temp){$container[$j+1] = $container[$j];
             $j--;
         }
         if($i != $j+1) 
@@ -85,17 +78,10 @@ function InsertSort(array $container)
 
 ```php
 function ShellSort(array $container)
-{
-    $count = count($container);
-    for ($increment = intval($count / 2); $increment > 0; $increment = intval($increment / 2)) {
-        for ($i = $increment; $i < $count; $i++) {
-            $temp = $container[$i];
-            for ($j = $i; $j >= $increment; $j -= $increment) {
-                if ($temp < $container[$j - $increment]) {
-                    $container[$j] = $container[$j - $increment];
-                } else {
-                    break;
-                }
+{$count = count($container);
+    for ($increment = intval($count / 2); $increment > 0; $increment = intval($increment / 2)) {for ($i = $increment; $i < $count; $i++) {$temp = $container[$i];
+            for ($j = $i; $j>= $increment; $j -= $increment) {if ($temp < $container[$j - $increment]) {$container[$j] = $container[$j - $increment];
+                } else {break;}
             }
             $container[$j] = $temp;
         }
@@ -110,17 +96,12 @@ function ShellSort(array $container)
 
 ```php
 function SelectSort(array $container)
-{
-    $count = count($container);
+{$count = count($container);
     for ($i = 0; $i < $count; $i++){
         $k = $i;
-        for ($j = $i + 1; $j < $count; $j++){
-            if($container[$j] < $container[$k]){
-                $k = $j;
-            }
+        for ($j = $i + 1; $j < $count; $j++){if($container[$j] <$container[$k]){$k = $j;}
         }
-        if($k != $i){
-            $temp          = $container[$i];
+        if($k != $i){$temp          = $container[$i];
             $container[$i] = $container[$k];
             $container[$k] = $temp;
         }
@@ -133,18 +114,14 @@ function SelectSort(array $container)
 
 ```php
 function QuickSort(array $container)
-{
-    $count = count($container);
+{$count = count($container);
     if ($count <= 1) { // 基线条件为空或者只包含一个元素，只需要原样返回数组
         return $container;
     }
     $pivot = $container[0]; // 基准值 pivot
     $left  = $right = [];
-    for ($i = 1; $i < $count; $i++) {
-        if ($container[$i] < $pivot) {
-            $left[] = $container[$i];
-        } else {
-            $right[] = $container[$i];
+    for ($i = 1; $i < $count; $i++) {if ($container[$i] <$pivot) {$left[] = $container[$i];
+        } else {$right[] = $container[$i];
         }
     }
     $left  = QuickSort($left);
@@ -161,11 +138,7 @@ function QuickSort(array $container)
 - 顺序查找
 
 ```php
-function find($array ,$target) {
-    foreach ($array as $key=>$value) {
-        if($value === $target) {
-            return key;
-        }
+function find($array ,$target) {foreach ($array as $key=>$value) {if($value === $target) {return key;}
     }
     return false;
 }
@@ -175,20 +148,12 @@ function find($array ,$target) {
 
 ```php
 function BinaryQueryRecursive(array $container, $search, $low = 0, $top = 'default')
-{
-    $top == 'default' && $top = count($container);
-    if ($low <= $top) {
-        $mid = intval(floor($low + $top) / 2);
-        if (!isset($container[$mid])) {
-            return false;
-        }
-        if ($container[$mid] == $search) {
-            return $mid;
-        }
-        if ($container[$mid] < $search) {
-            return BinaryQueryRecursive($container, $search, $mid + 1, $top);
-        } else {
-            return BinaryQueryRecursive($container, $search, $low, $mid - 1);
+{$top == 'default' && $top = count($container);
+    if ($low <= $top) {$mid = intval(floor($low + $top) / 2);
+        if (!isset($container[$mid])) {return false;}
+        if ($container[$mid] == $search) {return $mid;}
+        if ($container[$mid] <$search) {return BinaryQueryRecursive($container, $search, $mid + 1, $top);
+        } else {return BinaryQueryRecursive($container, $search, $low, $mid - 1);
         }
     }
 }
